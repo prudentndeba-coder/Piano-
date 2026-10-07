@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Keyboard Piano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Keyboard Piano</h1>
+  <p class="hint">Press A S D F G H J K to play (click the page once first to enable sound)</p>
+
+  <!-- Bonus: shows the last note played -->
+  <div id="last-note" aria-live="polite">&nbsp;</div>
+
+  <!-- Bonus: sound selector -->
+  <label class="wave">
+    Sound:
+    <select id="wave-select">
+      <option value="sine">Sine</option>
+      <option value="square">Square</option>
+      <option value="triangle">Triangle</option>
+      <option value="sawtooth">Sawtooth</option>
+    </select>
+  </label>
+
+  <!-- Music guide: pick a song and follow the highlighted keys -->
+  <div class="guide">
+    <label>
+      Song guide:
+      <select id="song-select">
+        <option value="">Off</option>
+        <option value="mary">Mary Had a Little Lamb</option>
+        <option value="twinkle">Twinkle, Twinkle, Little Star</option>
+        <option value="ode">Ode to Joy</option>
+        <option value="nearer">Nearer, My God, to Thee (opening)</option>
+      </select>
+    </label>
+    <div id="song-notes"></div>
+    <div id="song-msg"></div>
+  </div>
+
+  <div class="piano">
+    <div class="key" data-key="a" data-freq="262" data-name="Do">C<br><span class="solfege">Do</span><br><kbd>A</kbd></div>
+    <div class="key" data-key="s" data-freq="294" data-name="Re">D<br><span class="solfege">Re</span><br><kbd>S</kbd></div>
+    <div class="key" data-key="d" data-freq="330" data-name="Mi">E<br><span class="solfege">Mi</span><br><kbd>D</kbd></div>
+    <div class="key" data-key="f" data-freq="349" data-name="Fa">F<br><span class="solfege">Fa</span><br><kbd>F</kbd></div>
+    <div class="key" data-key="g" data-freq="392" data-name="Sol">G<br><span class="solfege">Sol</span><br><kbd>G</kbd></div>
+    <div class="key" data-key="h" data-freq="440" data-name="La">A<br><span class="solfege">La</span><br><kbd>H</kbd></div>
+    <div class="key" data-key="j" data-freq="494" data-name="Ti">B<br><span class="solfege">Ti</span><br><kbd>J</kbd></div>
+    <div class="key" data-key="k" data-freq="523" data-name="Do">C<br><span class="solfege">Do</span><br><kbd>K</kbd></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

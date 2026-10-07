@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #2b2d42;
+  color: #edf2f4;
+  text-align: center;
+  padding: 20px;
+}
+
+.hint { color: #adb5bd; }
+
+#last-note {
+  font-size: 3rem;
+  font-weight: bold;
+  height: 4rem;
+  color: gold;
+}
+
+.wave { display: inline-block; margin-bottom: 20px; }
+
+.piano {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.key {
+  width: 60px;
+  height: 200px;
+  background: white;
+  color: #222;
+  border: 1px solid #999;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 110px;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 0 #bbb;
+  transition: background 0.05s, transform 0.05s;
+}
+
+.solfege { font-size: 0.8rem; font-weight: normal; color: #555; }
+
+kbd {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.key.active {
+  background: gold;
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #bbb;
+}
+
+@media (max-width: 560px) {
+  .key { width: 40px; height: 160px; padding-top: 80px; font-size: 1rem; }
+  .key kbd { padding: 1px 5px; }
+}
+
+/* ---------- Music guide ---------- */
+.guide { margin-bottom: 20px; }
+
+#song-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  max-width: 560px;
+  margin: 12px auto 0;
+}
+
+.chip {
+  width: 32px;
+  padding: 6px 0;
+  border-radius: 6px;
+  background: #3d405b;
+  font-weight: bold;
+}
+.chip.done { opacity: 0.35; }
+.chip.current { background: gold; color: #222; transform: scale(1.15); }
+
+#song-msg { height: 1.5rem; margin-top: 10px; color: gold; font-weight: bold; }
+
+/* The key you should press next */
+.key.next { outline: 4px solid #4cc9f0; outline-offset: 2px; }
